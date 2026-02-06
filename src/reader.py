@@ -25,6 +25,7 @@ class Reader:
             prog="Call me Maybe",
             exit_on_error=False,
             usage=usage,
+            allow_abbrev=False,
         )
         parser.add_argument(
             "--input", default="data/input/", help="input directory path"

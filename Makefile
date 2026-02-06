@@ -1,4 +1,4 @@
-PYTHON_CMD  := uv run python3 -m src
+PYTHON_CMD  := uv run python3 -m src --output ol.json
 
 BOLD   := \033[1m
 RESET  := \033[0m
@@ -25,7 +25,7 @@ debug:
 
 clean:
 	@echo "$(BOLD)🗑️  Cleaning up build artifacts and cache...$(RESET)"
-	rm -rf .venv .mypy_cache src/__pycache__ uv.lock
+	rm -rf .mypy_cache src/__pycache__ llm_sdk/__pycache__
 	@echo "\n$(BOLD)$(GREEN)🧹 Workspace is clean.$(RESET)"
 
 lint:
